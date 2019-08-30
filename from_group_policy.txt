@@ -1,0 +1,153 @@
+Windows Registry Editor Version 5.00
+; Computer Configuration - Administrative templates - System - App-V - CEIP - CEIP=disable
+; Participate in Customer Experience Improvement Program
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\AppV\CEIP]
+"CEIPEnable"=dword:00000000
+
+; Computer Configuration - Administrative templates - System - Internet Communication Management - Internet Communication Settings
+; - Turn off handwriting personalization data sharing
+; - Turn off handwriting recognition error reporting
+; - Turn off Internet File Assosiation Service
+; - Turn off Registration on Microsoft.com
+; - Turn off Windows Messanger CEIP
+; - Turn off Windows CEIP
+; - Turn off Windows Error Reporting
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\TabletPC]
+"PreventHandwritingDataSharing"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports]
+"PreventHandwritingErrorReports"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoInternetOpenWith"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Registration Wizard Control]
+"NoRegistration"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Messenger\Client]
+"CEIP"=dword:00000002
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient\Windows]
+"CEIPEnable"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting]
+"DoReport"=dword:00000000
+; fake CEIP server
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient]
+"CorporateSQMURL"="1.1.1.1"
+
+; Computer Configuration - Administrative templates - Windows Components - Application Compatibility
+; - Turn off Application Telemetry
+; - Turn off Application Compatibility Engine
+; - Turn off Program Compatibility Assistant
+; - Turn off Inventory Collector
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
+"AITEnable"=dword:00000000
+"DisableEngine"=dword:00000001
+"DisableInventory"=dword:00000001
+"DisablePCA"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - AutoPlay Policies - Turn off Autoplay
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoDriveTypeAutoRun"=dword:000000ff
+
+; Computer Configuration - Administrative templates - Windows Components - Biometrics - Allow=false
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Biometrics]
+"Enabled"=dword:00000000
+
+; Computer Configuration - Administrative templates - Windows Components - Cloud content
+; - Dont show windows tips
+; - Turn off Microsoft Consumer Experiences
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent]
+"DisableSoftLanding"=dword:00000001
+"DisableWindowsConsumerFeatures"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Data Collection and Preview Builds
+; - Allow Telemetry: 0 = Security (minimal level)
+; - allows the device name to be sent
+; - Do not show feedback notifications
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+"AllowDeviceNameInTelemetry"=dword:00000000
+"DoNotShowFeedbackNotifications"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - File Explorer
+; - Configure Windows Defender SmartScreen = disabled
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
+
+; Computer Configuration - Administrative templates - Windows Components - Find My Device - Turn Off
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FindMyDevice]
+"AllowFindMyDevice"=dword:00000000
+
+; Computer Configuration - Administrative templates - Windows Components - Microsoft User Experiences Virtualization (sync app and windows settings)
+; - Enable UEV=false
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\UEV\Agent]
+"Enabled"=dword:00000000
+
+; Computer Configuration - Administrative templates - Windows Components - OneDrive
+; - Prevent OneDrive from generating network traffic until the user signs in to OneDrive
+; - Prevent usage of OneDrive for file storage
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OneDrive]
+"PreventNetworkTrafficPreUserSignIn"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\OneDrive]
+"DisableFileSync"=dword:00000001
+"DisableFileSyncNGSC"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Search
+; - Allow Cortana = disabled
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+"AllowCortana"=dword:00000000
+
+; Computer Configuration - Administrative templates - Windows Components - Shutdown Options
+; - Turn off legacy remote shutdown interface
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableShutdownNamedPipe"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Software Protection Platform
+; - Turn off KMS Client Online AVS Vaildation (data will not be sent to Microsoft)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform]
+"NoGenTicket"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Store
+; - Turn off Automatic Download and Install of Updates
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
+"AutoDownload"=dword:00000002
+
+; Disable Windows 8.1, Windows 10 MS Account Sync
+; Computer Configuration - Administrative templates - Windows Components - Sync your settings - Do not sync
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\SettingSync]
+"DisableSettingSync"=dword:00000002
+"DisableSettingSyncUserOverride"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Text Input
+; - Improve inking and typing recognition (send to Microsoft)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput]
+"AllowLinguisticDataCollection"=dword:00000000
+
+
+; Computer Configuration - Administrative templates - Windows Components - Windows Defender Antivirus - Turn off Windows Defender Antivirus
+; disable Windows Defender
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Windows Defender SmartScreen
+; - Explorer - Configure SmartScreen (same as Windows Components - File Explorer - SmartScreen)
+; - Edge
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
+"EnabledV9"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Windows Error Reporting
+; - Disable Windows Error Reporting
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Windows Media Digital Rights Management
+; - Prevent DRM Internet Access
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WMDRM]
+"DisableOnline"=dword:00000001
+
+; Computer Configuration - Administrative templates - Windows Components - Windows Update
+; Configure Automatic Updates - disabled (need check and install manually)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+
+; ...
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000
